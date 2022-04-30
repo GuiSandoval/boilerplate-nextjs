@@ -1,6 +1,7 @@
+import type { NextPage } from "next";
 import { useState } from "react";
 
-function Home(): JSX.Element {
+const Home: NextPage = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -15,6 +16,6 @@ function Home(): JSX.Element {
       </button>
     </div>
   );
-}
+};
 
 export default Home;
