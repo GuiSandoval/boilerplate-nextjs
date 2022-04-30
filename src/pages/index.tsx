@@ -1,12 +1,20 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { useState } from "react";
 
-const Home: NextPage = () => {
+function Home(): JSX.Element {
+  const [count, setCount] = useState(0);
+
   return (
-    <h1>Olá Mundo</h1>
-  )
+    <div>
+      <h1>Hello Next.js</h1>
+      <p>{count}</p>
+      <button
+        type="button"
+        onClick={() => setCount((prevState) => prevState + 1)}
+      >
+        Aumentar
+      </button>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
